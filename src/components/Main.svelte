@@ -147,7 +147,7 @@
         </div>
         <h5 class="text-2xl sm:text-3xl font-semibold text-center poppins">The <span class="text-violet-400 poppins">Complete</span> Package</h5>
         <div
-            class="flex flex-col gap-10 max-w-[800px] mx-auto w-full"
+            class="flex flex-col gap-10 max-w-[800px] overflow-auto mx-auto w-full"
         >
             <table class="bg-white text-slate-700 rounded text-center">
                 <thead class={"border-b border-solid border-slate-200  "}>
