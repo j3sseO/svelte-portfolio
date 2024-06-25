@@ -1,7 +1,15 @@
 <script>
+    import { fade } from "svelte/transition";
+    import { onMount, onDestroy } from 'svelte';
     export let show = false;
     export let step;
     export let onClose;
+    
+    // $: if (show) {
+    //     document.body.classList.add('overflow-hidden');
+    // } else {
+    //     document.body.class.remove('overflow-hidden');
+    // }
 </script>
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
@@ -9,22 +17,41 @@
     <!-- svelte-ignore a11y-click-events-have-key-events -->
     <div
         class="fixed inset-0 bg-black border-solid
-    border-violet-700 bg-opacity-50 flex justify-center items-center z-50"
+        border-violet-700 bg-opacity-50 flex justify-center items-center z-50"
         on:click={onClose}
     >
+        <div
+            class="fixed inset-0 bg-gray-500 bg-opacity-50" transition:fade={{ duration: 400}}
+            aria-hidden="true"
+        ></div>
         <!-- svelte-ignore a11y-click-events-have-key-events -->
         <div
-            class="bg-black p-6 rounded shadow-lg max-w-lg w-full relative"
+            class="bg-slate-950 p-8 flex flex-row rounded-lg shadow-lg max-w-5xl w-full relative p-200" transition:fade={{ duration: 400}}
             on:click|stopPropagation
         >
+            <div class="pr-5">
+                <img
+                    src={step.image1}
+                    alt="image1"
+                    class="sm:max-w-[40vh] rounded"
+                />
+                <img src={step.image2} alt="image2" class="sm:max-w-[40vh] rounded" />
+            </div>
+            <div>
+                <h3 class="font-medium text-3xl mb-4">{step.name}</h3>
+                <p>{@html step.description}</p>
+                <button
+                    type="button"
+                    class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+                    >Project Repository</button
+                >
+            </div>
             <button
-                class="absolute top-2 left-2 text-gray-500 hover:text-gray-700"
+                class="absolute top-1 left-2 text-gray-500 hover:text-gray-700"
                 on:click={onClose}
             >
                 <i class="fa fa-times"></i>
             </button>
-            <h3 class="text-2xl mb-4">{step.name}</h3>
-            <p>{step.description}</p>
         </div>
     </div>
 {/if}

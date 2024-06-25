@@ -6,15 +6,15 @@
     let innerWidth = 0;
     let innerHeight = 0;
 
-    function goTop() {
-        document.body.scrollIntoView();
-    }
+    // function goTop() {
+    //     document.body.scrollIntoView();
+    // }
 </script>
 
 <div
     class="container relative flex flex-col max-w-[1400px] mx-auto w-full text-sm sm:text-base main-h-screen"
 >
-    <div
+    <!-- <div
         class={"fixed bottom-0 w-full duration-200 flex p-10 z-[10] " +
             (y > 0
                 ? " opacity-full pointer-events-auto"
@@ -26,7 +26,7 @@
         >
             <i class="fa-solid fa-arrow-up" />
         </button>
-    </div>
+    </div> -->
     <Header {y}/>
     <slot />
     <Footer />

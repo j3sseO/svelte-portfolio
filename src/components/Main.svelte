@@ -6,17 +6,26 @@
         {
             name: "Encost Smart Graph Project",
             icon: "fa-solid fa-diagram-project",
-            description: "The Encost Smart Graph Project enables the visualization of Encost’s smart devices using a graph data structure. This project was undertaken as part of a software engineering course at the University of Waikato using Java."
+            briefdescription:
+                `<p>The Encost Smart Graph Project enables the visualization of Encost’s smart devices using a graph data structure. This project was undertaken 
+                    as part of a software engineering course at the University of Waikato using <strong class="text-violet-400">Java and GraphStream.</strong></p>`,
+            description: `<p>The Encost Smart Graph Project is primary a console application. Logging in, actioning a graph visualisation, 
+                            and displaying summary statistics, are all facilitated through command prompts.</p><br>
+                            <p>The software was developed as an object-oriented solution, making use of <strong class="text-violet-400">Java</strong> and the GraphStream library for graph visualisation.`,
+            image1: 'images/ESGPConsole.png',
+            image2: 'images/ESGPGraph.png'
         },
-        { 
+        {
             name: "n/a",
             icon: "fa-solid fa-diagram-project",
-            href: "" 
+            href: "",
+            image1: ''
         },
-        { 
-            name: "n/a", 
-            icon: "fa-solid fa-diagram-project", 
-            href: "" 
+        {
+            name: "n/a",
+            icon: "fa-solid fa-diagram-project",
+            href: "",
+            image1: ''
         },
     ];
 
@@ -112,8 +121,8 @@
         </a>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
             {#each steps as step}
-                <Step step={step} onClick={() => handleStepClick(step)}>
-                    <p>{step.description}</p>
+                <Step {step} onClick={() => handleStepClick(step)}>
+                    {@html step.briefdescription}
                 </Step>
             {/each}
         </div>
@@ -153,7 +162,9 @@
                 </div>
             {/each}
         </div>
-        <h5 class="text-2xl sm:text-3xl font-semibold text-center poppins">The <span class="text-violet-400 poppins">Complete</span> Package</h5>
+        <h5 class="text-2xl sm:text-3xl font-semibold text-center poppins">
+            The <span class="text-violet-400 poppins">Complete</span> Package
+        </h5>
         <div
             class="flex flex-col gap-10 max-w-[800px] overflow-auto mx-auto w-full"
         >
