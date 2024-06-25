@@ -27,7 +27,7 @@
             <i class="fa-solid fa-arrow-up" />
         </button>
     </div>
-    <Header {y} {innerHeight}/>
+    <Header {y}/>
     <slot />
     <Footer />
 </div>

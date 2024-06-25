@@ -1,11 +1,12 @@
 <script>
+    import Modal from "./Modal.svelte";
     import Step from "./Step.svelte";
 
     let steps = [
         {
             name: "Encost Smart Graph Project",
             icon: "fa-solid fa-diagram-project",
-            href: "https://github.com/j3sseO/EncostSmartGraphProject"
+            description: "The Encost Smart Graph Project enables the visualization of Encost’s smart devices using a graph data structure. This project was undertaken as part of a software engineering course at the University of Waikato using Java."
         },
         { 
             name: "n/a",
@@ -18,6 +19,19 @@
             href: "" 
         },
     ];
+
+    let selectedStep = null;
+    let showModal = false;
+
+    function handleStepClick(step) {
+        selectedStep = step;
+        showModal = true;
+    }
+
+    function closeModal() {
+        showModal = false;
+        selectedStep = null;
+    }
 
     let benefits = [
         {
@@ -97,20 +111,14 @@
             <p>GitHub</p>
         </a>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
-            <Step step={steps[0]}>
-                <p>
-                    The Encost Smart Graph Project enables the visualization of
-                    Encost’s smart devices using a graph data structure. This
-                    project was undertaken as part of a software engineering
-                    course at the <strong class="text-violet-400"
-                        >University of Waikato using Java.</strong
-                    >
-                </p>
-            </Step>
-            <Step step={steps[1]}></Step>
-            <Step step={steps[2]}></Step>
+            {#each steps as step}
+                <Step step={step} onClick={() => handleStepClick(step)}>
+                    <p>{step.description}</p>
+                </Step>
+            {/each}
         </div>
     </section>
+    <Modal show={showModal} step={selectedStep} onClose={closeModal} />
     <section
         id="about"
         class="py-20 pt-10 lg:pt-16 lg:py-32 flex flex-col gap-16 sm:gap-20 md:gap-24 relative"
