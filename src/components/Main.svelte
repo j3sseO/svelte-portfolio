@@ -6,27 +6,33 @@
         {
             name: "Encost Smart Graph Project",
             icon: "fa-solid fa-diagram-project",
-            briefdescription:
-                `<p>The Encost Smart Graph Project enables the visualization of Encost’s smart devices using a graph data structure. This project was undertaken 
+            briefdescription: `<p>The Encost Smart Graph Project enables the visualization of Encost’s smart devices using a graph data structure. This project was undertaken 
                     as part of a software engineering course at the University of Waikato using <strong class="text-violet-400">Java and GraphStream.</strong></p>`,
-            description: `<p>The Encost Smart Graph Project is primary a console application. Logging in, actioning a graph visualisation, 
-                            and displaying summary statistics, are all facilitated through command prompts.</p><br>
-                            <p>The software was developed as an object-oriented solution, making use of <strong class="text-violet-400">Java</strong> and the GraphStream library for graph visualisation.`,
-            image1: 'images/ESGPConsole.png',
-            image2: 'images/ESGPGraph.png'
+            description: `<p>The <strong>Encost Smart Graph Project</strong> (ESGP) is a software system designed to visualise Encost's smart home devices using a graph data 
+                    structure. The core functionality of the ESGP revolves around is ability to display devices from the Encost Smart Homes Dataset as nodes in a graph, with their
+                    connections represented as edges. This allows users to see how devices are interconnected and whether each device can send and/or receive commands.</p><br>
+                    <p>Users of the ESGP are categorised into two roles: Community Users and Encost Users. Community Users have access to the basic feature of viewing the graph
+                    visualisation for the Encost Smart Homes Dataset. Encost Users, on the other hand, have access to loading custom datasets, visualising graph representations, 
+                    and viewing summary statistics on device distribution, location, and connectivity.</p><br>
+                    <p>The software is built on a technology stack that includes Windows 10 as the intended operating system, Java verstion 1.8.0 or higher, and the GraphStream
+                        library version 1.3 for building and visualising dynamic graphs. The design of the ESGP follows object-orientated principles.</p><br>
+                    <p>Take a further look in the repository below!</p>`,
+            image1: "images/ESGPConsole.png",
+            image2: "images/ESGPGraph.png",
+            repolink: "https://github.com/j3sseO/EncostSmartGraphProject",
         },
-        {
-            name: "n/a",
-            icon: "fa-solid fa-diagram-project",
-            href: "",
-            image1: ''
-        },
-        {
-            name: "n/a",
-            icon: "fa-solid fa-diagram-project",
-            href: "",
-            image1: ''
-        },
+        // {
+        //     name: "n/a",
+        //     icon: "fa-solid fa-diagram-project",
+        //     href: "",
+        //     image1: "",
+        // },
+        // {
+        //     name: "n/a",
+        //     icon: "fa-solid fa-diagram-project",
+        //     href: "",
+        //     image1: "",
+        // },
     ];
 
     let selectedStep = null;
@@ -44,17 +50,17 @@
 
     let benefits = [
         {
-            name: "an educated professional",
+            name: "An educated professional",
             description:
                 "I'm a motivated and detail-orientated final year Computer Science student with a strong foundation in software development, algorithms, data structures, web development, database concepts, and networking.",
         },
         {
-            name: "an experienced individual",
+            name: "An experienced individual",
             description:
                 "I'm experienced in various programming languages including Java, and C#, with a proven ability to design, develop, and implement innovative software solutions",
         },
         {
-            name: "an excellent communicator",
+            name: "An excellent communicator",
             description:
                 "Communication is key and it's a paramount value of mine. I believe in transparency and constructive communication above all else. This helps me develop deep relationships and ensures my effectiveness and productivity in any work space with any team.",
         },
@@ -104,11 +110,8 @@
     <section id="projects" class="py-20 lg:py-32 flex flex-col gap-24">
         <div class="flex flex-col gap-2 text-center">
             <h6 class="ext-large sm:text-xl md:text-2xl">
-                A few of my creative endeavours.
-            </h6>
-            <h3>
                 Curious to <span class="poppins text-violet-400">see</span> my work?
-            </h3>
+            </h6>
         </div>
         <a
             href="https://github.com/j3sseO"
@@ -162,69 +165,5 @@
                 </div>
             {/each}
         </div>
-        <h5 class="text-2xl sm:text-3xl font-semibold text-center poppins">
-            The <span class="text-violet-400 poppins">Complete</span> Package
-        </h5>
-        <div
-            class="flex flex-col gap-10 max-w-[800px] overflow-auto mx-auto w-full"
-        >
-            <table class="bg-white text-slate-700 rounded text-center">
-                <thead class={"border-b border-solid border-slate-200  "}>
-                    <tr class="">
-                        <th />
-                        <th class="whitespace-nowrap p-2 px-4">Candidate #1</th>
-                        <th class="whitespace-nowrap p-2 px-4">Candidate #2</th>
-                        <th class="whitespace-nowrap p-2 px-4">Candidate #3</th>
-                        <th
-                            class="bg-violet-700 text-white whitespace-nowrap p-4 px-8 rounded"
-                            >Me</th
-                        >
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="border-b border-solid border-slate-200">
-                        <td
-                            class="border-r border-solid border-white pl-4 pr-8 py-4 font-semibold text-sm"
-                            >Dedication</td
-                        >
-                        <td><i class="fa-solid fa-xmark text-slate-500" /></td>
-                        <td><i class="fa-solid fa-check text-slate-500" /></td>
-                        <td><i class="fa-solid fa-xmark text-slate-500" /></td>
-                        <td><i class="fa-solid fa-check text-green-500" /></td>
-                    </tr>
-                    <tr class="border-b border-solid border-slate-200">
-                        <td
-                            class="border-r border-solid border-white pl-4 pr-8 py-4 font-semibold text-sm"
-                            >Critical Thought</td
-                        >
-                        <td><i class="fa-solid fa-xmark text-slate-500" /></td>
-                        <td><i class="fa-solid fa-check text-slate-500" /></td>
-                        <td><i class="fa-solid fa-check text-slate-500" /></td>
-                        <td><i class="fa-solid fa-check text-green-500" /></td>
-                    </tr>
-                    <tr>
-                        <td
-                            class="border-r border-solid border-white pl-4 pr-8 py-4 font-semibold text-sm"
-                            >Interpersonal Skills</td
-                        >
-                        <td><i class="fa-solid fa-check text-slate-500" /></td>
-                        <td><i class="fa-solid fa-check text-slate-500" /></td>
-                        <td><i class="fa-solid fa-xmark text-slate-500" /></td>
-                        <td><i class="fa-solid fa-check text-green-500" /></td>
-                    </tr>
-                    <tr class="border-t border-solid border-slate-200">
-                        <td
-                            class="border-r border-solid border-white pl-4 pr-8 py-4 font-semibold text-sm"
-                            >Progamming Ability</td
-                        >
-                        <td><i class="fa-solid fa-check text-slate-500" /></td>
-                        <td><i class="fa-solid fa-xmark text-slate-500" /></td>
-                        <td><i class="fa-solid fa-check text-slate-500" /></td>
-                        <td><i class="fa-solid fa-check text-green-500" /></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <p class="mx-auto">So why not invest?</p>
     </section>
 </main>

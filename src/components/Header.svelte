@@ -2,8 +2,9 @@
     export let y;
 
     let tabs = [
-        { name: "Projects", link: "#projects" },
-        { name: "About Me", link: "#about" },
+        { name: "Projects", link: "#projects", target: null },
+        { name: "About Me", link: "#about", target: null},
+        { name: "Resume", link: "assets/resume.pdf", target: 'not null'}
         // {name: 'Blog', '#projects'}
     ];
 </script>
@@ -19,9 +20,15 @@
     </h1>
     <div class="sm:flex ml-auto pr-4 items-center gap-4 hidden">
         {#each tabs as tab, index}
-            <a href={tab.link} class="duration-200 hover:text-violet-400">
-                <p>{tab.name}</p>
-            </a>
+            {#if tab.target != null}
+                <a href={tab.link} class="duration-200 hover:text-violet-400" target="_blank">
+                    <p>{tab.name}</p>
+                </a>
+            {:else}
+                <a href={tab.link} class="duration-200 hover:text-violet-400">
+                    <p>{tab.name}</p>
+                </a>
+            {/if}
         {/each}
     </div>
     <a
