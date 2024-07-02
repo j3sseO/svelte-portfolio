@@ -122,12 +122,13 @@
             <!-- <i class="fa-regular fa-circle-play"></i> -->
             <p>GitHub</p>
         </a>
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-10">
             {#each steps as step}
                 <Step {step} onClick={() => handleStepClick(step)}>
                     {@html step.briefdescription}
                 </Step>
             {/each}
+            <h3 class="font-medium text-xl sm:text-2xl md:text-3xl self-center">More to come!</h3>
         </div>
     </section>
     <Modal show={showModal} step={selectedStep} onClose={closeModal} />
